@@ -1,0 +1,31 @@
+RDS databases
+- RDS:
+	- different types:
+		- SQL
+		- MySQL
+		- PostGreSQL
+		- Oracle
+		- Aurora
+		- MariaDB
+	- Multiple AZ - for disaster recovery
+	- Read replicas - for performance
+
+- Amazons noSql database is called DynamoDB
+
+- OLTP (Online Transaction Processing)
+	- Differns from OLAP (Online Analytics processing) in terms of the types of queries you will run
+
+	OLTP ex: an order number brings up rows of data such as name, date, address, etc...
+	OLAP ex: performs functions on data, such as comparing regions and running sums on the data returned. Much more resource intensive.
+
+- What is data warehousing:
+	- It's used for business intelligence tools like Jaspersoft, SQL Server Reporting Services, Oracle Hyperion. Used to pull in very large and complex datasets. Usually used by management to do queries on data (such as current performance vs targets etc)
+
+- Amazons OLAP data warehouse solution is called Redshift
+
+- ElastiCache:
+	- A web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web apps by allowing you to retrieve informatino from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases. It allows you to cache your most common queries, which takes load off production databases. 
+
+	Elasticache supports two open-source in-memory caching engines
+		- memcached
+		- Redis
