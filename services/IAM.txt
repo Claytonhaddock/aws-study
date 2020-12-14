@@ -1,0 +1,20 @@
+Key terminology:
+
+Root account    - only used to create AWS account
+users           - end users, such as employees
+groups          - each user in group will inherit permissions of the group
+roles           - roles are assigned to AWS resources
+policies        - JSON documents that provide permissions for users groups and roles 
+Access Keys     - use access keys for programmatic access to aws
+IAM cred report - can be used to audit permissions of users/accounts
+
+
+Exam Tips:
+- IAM stands for identy and access management
+- IAM is global - no regions are needed. 
+- AWS platform is accessible in three ways:
+	- UI
+	- CLI
+	- SDK
+- Root account is email address used to create the account
+- To set permissions to a group you must apply a policy to that group

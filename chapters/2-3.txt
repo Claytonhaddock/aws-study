@@ -1,0 +1,12 @@
+Ch 2.3
+
+Support Plan
+	- Basic
+	- Developer
+	- Business
+	- Enterprise - offers TAM
+
+
+Cloudwatch:
+Create a billing alarm to send an email if billing goes over $10. It uses an sns topic
+

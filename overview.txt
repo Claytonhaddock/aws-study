@@ -1,0 +1,23 @@
+What do you need to know to pass - Certified Cloud Practitioner Exam?
+	- security, identity, and compliance
+	- aws cost management
+	- Compute
+	- Databases
+	- Storage
+	Optional
+		- Network & content delivery
+		- Migration & transfer
+
+AWS high level services:
+compute
+	- EC2
+	- Lambda
+storage
+	- S3
+	- Glacier
+databases
+	- RDS
+	- DynamoDB
+Network
+	- VPC
+	- Route53

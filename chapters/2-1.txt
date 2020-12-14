@@ -1,0 +1,19 @@
+Ch 2.1
+
+6 advantages of cloud
+	- trade capital expense for variable expense
+	- benefit from massive economies of scale
+	- stop guessing about capacity
+	- increase speed and agility
+	- stop spending money running data centers
+	- go global quickly
+
+3 types of cloud computing:
+	- iaas - infrastructure as a service (EC2)
+	- paas - platform as a service (elastic-beanstalk, godaddy)
+	- saas - software as a service (gmail)
+
+3 Types of cloud computing deployments:
+	- public cloud - aws, azure, gcp
+	- hybrid - muxture of public and private
+	- private (on prem) - you manage it, in your datacenter, opstack or vmware

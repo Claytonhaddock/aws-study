@@ -1,0 +1,51 @@
+- Simple Storage Service -
+
+
+ - Object-based storage (designed to hold asset files). Not suitable for installing OS
+ - Data is spread across multiple devices and facilities
+ - unlimited storage
+ - Files are stored in buckets
+ - Buckets must have unique names globally
+ - Transfer acceleration uses edge caches
+ - files can be from 0bytes to 5TB
+ - Objects consist of:
+ 	- Key (name)
+ 	- Value (the data being stored)
+ 	- Version ID
+ 	- Metadata
+ 	- subresources
+
+How does data consistency work for S3?
+	- Read after consistency for PUTS of new object
+		- If you write a new file and then read, you will be able to read immediately
+	- eventual consistency for overwrite PUTS and DELETES
+		- If you update an existing file or delete a file and read it immediately, you may get the older version becaue the new file hasn't propogated.
+
+Following guarantees from Amazon:
+	- Built for 99.9% availability
+	- Amazon guarantees 99.999999999999% durability, meaning it won't disappear
+
+Features:
+	- tiered storage available
+	- lifecycle management
+	- versioning
+	- encryption
+	- secure data using access control lists and bucket policies
+
+Storage classes: 6x
+	- S3 standard
+	- S3 - IA (infrequently accessed) for data that isn't often accessed
+	- S3 One Zone - IA - cheapest option for infrequent data not reuquiring multiple availability zones
+	- S3 - Intelligent Tiering - optimizes costs by automatically moving data to the cost-effective access tier with peformance impact or operation overhead
+	- S3 Glacier - secure, durable, cheap storage. Configurable retrieval time
+	- S3 glacier deep archive - retrieval time of 12 hours, but very cheap
+
+S3 Charges:
+- Storage
+- requests
+- Storage management pricing
+- Data transfer pricing
+- Tranfer acceleration
+	- enable fast easy and secure transfer of files over long distances between your end users and S3 bucket. Caching files on edge locations.
+- cross region replication pricing
+	- Allows for two buckets which replicates files to one another for preservation

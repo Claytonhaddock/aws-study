@@ -1,0 +1,78 @@
+Elastic Compute Cloud
+
+- What is it?:
+	- It is a virtual server in the cloud. EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change.
+
+- Pricing models:
+	- On demand: allows you to pay a fixed rate by the hour
+		- users that want low-cost and flexibility w/o up-front payment or long-term commitment.
+		- Apps with short term, spiky, or unpredictable workloads that can't be interupted.
+		- Apps being developed on EC2 for the first time.
+	- Reserved: provides you with capacity reservatrion and offer a signifcant discount on the hourly charge for an instance. Contract terms are 1 year and 3 years terms.
+		- Apps with steady state or predictable usage.
+		- Apps that require reserved capacity
+		- Users able to make upfron payments to reduce their compute costs
+		- Pricing types:
+			- standard reserved instances
+			- convertible reserved instances
+			- scheduled reserved instances
+	- Spot: Enables you to bid whatever price you want for instance capacity. Helps if you app has flexible start and end times
+		- Useful for apps with flexible start and end times
+		- Apps that are only feasible at very low compute prices
+		- Users with urgent computing needs for large amounts of additional capacity
+	- Dedicated Hosts: Physical EC2 server dedicated for your use. Dedicated hosts can help reduce costs by allowing you to use your existing server-bound software licenses.
+		 - Useful for regulatory requimrents that may not support multi-tenant virtualization
+		 - Great for licensing which does not support multi tenancy or cloud deployments
+		 - Can be purchased on-demand (hourly)
+		 - Can be purchased as a reservation at 70% off price
+
+Types of EC2 classes:
+	F - fpga
+	I - IOPS
+	G - Graphics
+	H - High disk throughput
+	T - Cheap general purpose (T2 micro)
+	D - density
+	R - RAM
+	M - main choice for general purpose apps
+	C - Compute
+	P - Graphics(pics)
+	X - extreme memory
+	Z - extreme memory and CPU
+	A - arm-based worklods
+	U - bare metal
+
+What is EBS?
+	- EBS allows you to create storage volumes and attach them to amazon ec2 instances. Once attached, you can create a file system on top of these volumes, run a databse, or use them in any other way you would use a block device. EBS volumes are placed in a specific availability zone, where they are automatically replicated to protect you from the failure of a single component.
+		- SSD: 
+			- General purpose SSD(GP2) - Balances price and performance for a wide variety of workloads
+			- Provisional IOPS SSD(IO1) - highest performance SSD volume for mission-critical low-latency or high-throughput workloads
+		- Magnetic:
+			- Throughput Optimized HDD(ST1) - Low cost HDD volume designed for frequently accessed, throughput-intensive workloads
+			- Cold HDD(SC1) - lowst cost HDD volume designed for less frequently accessed workloads (file servers).
+			- Magnetic - previous generation
+
+Exam tips:
+	- It is a virtual server in the cloud
+	- Pricing models:
+		- on-demand
+		- reserved
+		- spot
+		- dedicated hosts
+
+	- What happens if spot intance is terminated by EC2?
+		- You will not be charged for a partial hour of usage, however if you terminate the instance yourself you will be changed for any hour in which the instance ran.
+
+	- private key is required to connect to EC2
+	- Connection ports:
+		- Linux: 22
+		- MSFT: RDP - 3389
+		- Http: 80
+		- Https: 443
+
+	- Security group - basically a virtual firewall
+		- To let everything in use 0.0.0.0/0
+		- To specify then add IP X.X.X.X/32
+		- ports must be opened to use them in security groups
+
+	- Always design for failure. Have one EC2 instance in each availability zone.

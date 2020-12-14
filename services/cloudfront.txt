@@ -1,0 +1,6 @@
+Cloudfront:
+ - Amazon's content delivery network. A system of distributed servers that deliver webpages and other web content to a user bansed on their geographic locations.
+
+ - edge locations - Location of content to be cached
+ - Origin - origin of all the files that the CDN will distribute
+ - Distribution - this is the name given the CDN which consists of a collection of Edge locations

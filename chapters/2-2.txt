@@ -1,0 +1,11 @@
+Ch 2.2
+
+Global Infrastructure:
+	 - 19 regions - geographical area (us-east-1) that consists of 2+ availability zones
+	 - 57 availablility zones - 1+ Datacenters
+	 - Edge location - endpoints(?) for AWS which are used for caching content, usually for cloudfront. Can use lambdas lambda@edge
+
+Choosing the right AWS region:
+	- Data sovereignty laws - some countries may have more stringent laws
+	- Latency to end users
+	- AWS services availability - some regions may have different services available
