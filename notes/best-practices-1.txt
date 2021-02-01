@@ -1,0 +1,59 @@
+Architecting for the cloud - Best practices:
+- Read the white papers they mention!
+1. Traditional computing vs cloud computing
+ - IT assets as provisioned resources (cloudformation, terraform)
+ - Global, available, and scaleable capacity
+ - Higher level managed services (machine learning)
+ - Built-in security. Safer to host infra on AWS than hosting yourself or on prem.
+ - Architecting for cost. Can design cloud infra to be as cost efficient as possible.
+ - Operations on AWS. Most companies do 'lift and shift' to bring their services into AWS
+
+ Scalability:
+ 	- scale up - increasing amount of ram or cpu in a VM
+ 	- scale out - increasing number of VMs
+ 		- Stateless Applications: (lambda) alexa
+ 		- Distribute load to multiple nodes
+ 		- stateless components: ex. sign into website using cookie by storing in users browser
+ 		- stateful components: ex. store user data in a DB.
+ 		- implement session affinity: sticky session means you put cookie in user browser, every time they visit a site an App Load Balancer will detect the cookie and assign the user back to the same EC2 instance.
+ 		- Distributed Processing - elastic map reduce
+ 		- Implement Distributed Processing - Handle large, complex amounts of data by using many EC2 instances, instead of using one in order to process the data faster.
+
+Instantiation Compute Resources:
+	- Bootstrapping
+	- Golden Images: take an image of an EC2 instance as a template to make new ones
+	- Containers
+	- Hybrid
+
+Infrastructure as code:
+	- Cloudformation
+
+Automation:
+	- serverless management and deployment: lambda and stateless stuff. COde pipeline and deployment
+	- Infrastructure management and deployment:
+		- AWS elastic beanstalk
+		- Amazon EC2 auto recovery
+		- AWS Systems manager
+		- Auto Scaling
+
+	- Alarms and Events:
+		- cloudwatch alarms
+		- cloudwatch events
+		- Lambda scheduled events
+		- WAF security
+
+Loose coupling:
+	- Well defined interfaces
+		- Amazon API Gateway
+	- Service Discovery
+		- Implement Service Discovery
+
+Distributed systems best pracitces:
+	- Graceful failure in practice
+
+Services not servers
+	- Managed services
+		- lambda
+		- S3
+	-Serverless architecture
+		- 
